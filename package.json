@@ -6,7 +6,9 @@
   "version": "0.1.0",
   "scripts": {
     "start": "babel-node ./server.js",
-    "update-schema": "babel-node ./scripts/updateSchema.js"
+    "update-schema": "babel-node ./scripts/updateSchema.js",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "dependencies": {
     "babel-core": "6.3.21",
@@ -25,6 +27,8 @@
     "react-dom": "0.14.3",
     "react-relay": "0.6.0",
     "webpack": "1.12.9",
-    "webpack-dev-server": "1.14.0"
-  }
+    "webpack-dev-server": "1.14.0",
+    "snyk": "^1.190.0"
+  },
+  "snyk": true
 }
